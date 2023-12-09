@@ -62,7 +62,16 @@ func findLastDigit(word string) string {
 
 func StringsToInts(word string) string {
 	r := strings.NewReplacer(
+
+		"twone", "21",
 		"oneight", "18",
+		"sevenine", "79",
+		"eightwo", "82",
+		"fiveight", "58",
+		"eighthree", "83",
+		"nineight", "98",
+		"threeight", "38",
+
 		"one", "1",
 		"two", "2",
 		"three", "3",
