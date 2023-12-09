@@ -8,7 +8,6 @@ import (
 	"github.com/romietis/aocutil"
 )
 
-// 1636760
 func main() {
 	cards, _ := aocutil.ReadFile("input.txt")
 
@@ -55,11 +54,8 @@ func calcMultiplier(id int, winningNumbers []int, myNumbers []int) int {
 func parseCard(card string) (id int, winningNumbers []int, myNumbers []int) {
 	parts := strings.Split(card, ":")
 	idPart := parts[0]
-	fmt.Println("vvvv", idPart)
 	idString := strings.Split(idPart, "d")[1]
-	fmt.Println("aaaaaaaaaa", idString)
 	idStringTrimmed := strings.TrimSpace(idString)
-	fmt.Println("sadffasf", idStringTrimmed)
 	id, _ = strconv.Atoi(idStringTrimmed)
 
 	numbersPart := parts[1]
@@ -86,19 +82,3 @@ func parseCard(card string) (id int, winningNumbers []int, myNumbers []int) {
 
 	return id, winningNumbers, myNumbers
 }
-
-// func readFile(filename string) ([]string, error) {
-// 	file, err := os.Open(filename)
-// 	if err != nil {
-// 		return nil, err
-// 	}
-// 	defer file.Close()
-
-// 	var lines []string
-// 	scanner := bufio.NewScanner(file)
-// 	for scanner.Scan() {
-// 		lines = append(lines, scanner.Text())
-// 	}
-
-// 	return lines, scanner.Err()
-// }
