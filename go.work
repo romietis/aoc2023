@@ -3,6 +3,7 @@ go 1.21.5
 use (
 	./aocutil
 	./day1
+	./day15
 	./day2
 	./day3
 	./day4
