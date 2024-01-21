@@ -9,22 +9,11 @@ import (
 )
 
 func main() {
-
-	// document := []string{
-	// 	"two1nine",
-	// 	"eightwothree",
-	// 	"abcone2threexyz",
-	// 	"xtwone3four",
-	// 	"4nineeightseven2",
-	// 	"zoneight234",
-	// 	"7pqrstsixteen"}
-
 	file, _ := os.Open("input.txt")
 	scanner := bufio.NewScanner(file)
 
 	pairs := []string{}
 	for scanner.Scan() {
-		// for _, word := range document {
 		var pair string
 
 		replaced_word := StringsToInts(scanner.Text())
@@ -32,7 +21,6 @@ func main() {
 		pair += findLastDigit(replaced_word)
 		pairs = append(pairs, pair)
 	}
-	fmt.Println(pairs)
 
 	var sum int
 	for _, pair := range pairs {
